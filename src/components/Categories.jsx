@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/styles/components/Categories.scss';
+import PropTypes from 'prop-types';
 
 const Categories = ({ children, title }) => (
   <div className="categories">
@@ -7,5 +8,10 @@ const Categories = ({ children, title }) => (
     {children}
   </div>
 );
+
+Categories.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.element
+}
 
 export default Categories;
